@@ -272,13 +272,53 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 777632248}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.62, y: 6.69, z: -10}
+  m_LocalRotation: {x: 0.2842053, y: -0, z: -0, w: 0.9587635}
+  m_LocalPosition: {x: 15.15, y: 15.89, z: -8.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 33.023003, y: 0, z: 0}
+--- !u!1 &1186437215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1186437216}
+  - component: {fileID: 1186437217}
+  m_Layer: 0
+  m_Name: FireSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1186437216
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1186437215}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1542445489}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1186437217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1186437215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b234ebb473f78448942604bb2c3fb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1279679001
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +397,7 @@ GameObject:
   - component: {fileID: 1542445486}
   - component: {fileID: 1542445490}
   - component: {fileID: 1542445485}
+  - component: {fileID: 1542445491}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -375,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fefa95eecdac104aa5435acfa7c9caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 15
 --- !u!23 &1542445486
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -440,6 +481,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.80149263, z: 1}
   m_Children:
   - {fileID: 451597677}
+  - {fileID: 1186437216}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -458,6 +500,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1542445491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1542445484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab40aeadccd2aeb40b59573c4edeae53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2016781593
 GameObject:
   m_ObjectHideFlags: 0
