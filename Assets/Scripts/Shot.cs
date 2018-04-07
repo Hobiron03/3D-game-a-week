@@ -5,6 +5,9 @@ using UnityEngine;
 public class Shot : MonoBehaviour {
 
     public GameObject bullet;
+
+    float timeInterval = 0.15f;
+    float time = 0f;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,10 +16,16 @@ public class Shot : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+        time += Time.deltaTime;
+        if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space))
         {
-            Instantiate(bullet, transform.position, this.gameObject.transform.rotation);
-
+            if (timeInterval < time)
+            {
+                Instantiate(bullet, transform.position, this.gameObject.transform.rotation);
+                time = 0f;
+            }
+            
+           
         }
     }
 }
