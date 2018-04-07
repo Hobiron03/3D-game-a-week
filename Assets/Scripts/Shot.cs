@@ -6,7 +6,7 @@ public class Shot : MonoBehaviour {
 
     public GameObject bullet;
 
-    float timeInterval = 0.15f;
+    float timeInterval = 0.1f;
     float time = 0f;
 	// Use this for initialization
 	void Start () {
