@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour {
     {
         if (other.gameObject.name == "Bullet(Clone)")
         {
-            Debug.Log("あたったよ");
+          
             GotShot();
             
             Destroy(other.gameObject);
