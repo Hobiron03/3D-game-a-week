@@ -6,6 +6,7 @@ public class EnemyShot : MonoBehaviour {
 
     public GameObject enemyBullet;
     public GameObject player;
+    
 
     float timeInterval = 1.0f;
     float time = 0f;
