@@ -9,11 +9,13 @@ public class EnemyController : MonoBehaviour {
     public GameObject mainCamera;
 
     public AudioClip destroySE;
+    public AudioClip HitSE;
 
+    AudioSource audioSource;
 	// Use this for initialization
 	void Start ()
     {
-		
+        audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -27,7 +29,7 @@ public class EnemyController : MonoBehaviour {
         {
           
             GotShot();
-            
+            audioSource.PlayOneShot(HitSE);
             Destroy(other.gameObject);
         }
     }
