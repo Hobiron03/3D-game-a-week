@@ -7,6 +7,9 @@ public class PlayerConroller : MonoBehaviour {
     public float speed = 20f;
     public int hp = 5;
     public GameObject DestroyEffect;
+    AudioSource audio;
+    public AudioClip destroySE;
+    public GameObject mainCamera;
 
     float moveX = 0f;
     float moveZ = 0f;
@@ -16,6 +19,7 @@ public class PlayerConroller : MonoBehaviour {
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -40,9 +44,12 @@ public class PlayerConroller : MonoBehaviour {
             gameController.GetComponent<GameDirector>().SetHpGage(hp);
             if(hp <= 0)
             {
+                AudioSource.PlayClipAtPoint(destroySE, mainCamera.transform.position, 0.4f);
                 Instantiate(DestroyEffect, transform.position, Quaternion.identity);
+                gameController.GetComponent<GameDirector>().GameOver();
                 Destroy(gameObject);
             }
+            audio.Play();
         }
     }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 using DG.Tweening;
 using TMPro;
 
-public class TextFade : MonoBehaviour {
 
-    public bool gameClear = false;
-    public bool gameOver = false;
+public class TextFadeGameOver : MonoBehaviour {
+
+    public bool isGameOver = false;
 
     float fadeSpeed = 0.05f;
     float red, green, blue, alpha;
@@ -15,7 +15,7 @@ public class TextFade : MonoBehaviour {
 
     AudioSource audio;
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         fadeImage = GetComponent<TextMeshProUGUI>();
         red = fadeImage.color.r;
@@ -23,27 +23,27 @@ public class TextFade : MonoBehaviour {
         blue = fadeImage.color.b;
         alpha = fadeImage.color.a;
 
-        
+
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-	    if(gameClear)
+        if (isGameOver)
         {
             StartFadeOut();
         }
-	}
+    }
 
     void StartFadeOut()
     {
-       
+
         alpha += fadeSpeed;
         SetAlpha();
 
         if (alpha >= 255)
         {
-            gameClear = false;
+            isGameOver = false;
             audio.Play();
         }
     }

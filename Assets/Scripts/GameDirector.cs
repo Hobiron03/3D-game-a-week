@@ -14,6 +14,7 @@ public class GameDirector : MonoBehaviour {
     int destroyedEnemyNum = 0;
 
     public GameObject gameClearUI;
+    public GameObject gameOverUI;
     public GameObject FadeUI;
 	// Use this for initialization
 	void Start () {
@@ -43,6 +44,11 @@ public class GameDirector : MonoBehaviour {
             isGameClear = true;
             gameClearUI.GetComponent<TextFade>().gameClear = isGameClear;            
         }
+    }
+
+    public void GameOver()
+    {
+        gameOverUI.GetComponent<TextFadeGameOver>().isGameOver = true;
     }
 
     void FadeOut()
