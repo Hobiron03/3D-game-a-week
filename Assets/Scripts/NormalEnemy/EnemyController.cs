@@ -11,6 +11,8 @@ public class EnemyController : MonoBehaviour {
     public AudioClip destroySE;
     public AudioClip HitSE;
 
+    public GameObject gameDirector;
+
     AudioSource audioSource;
 	// Use this for initialization
 	void Start ()
@@ -41,6 +43,7 @@ public class EnemyController : MonoBehaviour {
         {
             AudioSource.PlayClipAtPoint(destroySE, mainCamera.transform.position, 0.4f);
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
+            gameDirector.GetComponent<GameDirector>().AddDestroyEnemyNum();
             Destroy(gameObject);
         }
     }

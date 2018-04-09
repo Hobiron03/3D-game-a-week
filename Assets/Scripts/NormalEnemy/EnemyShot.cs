@@ -10,6 +10,7 @@ public class EnemyShot : MonoBehaviour {
 
     float timeInterval = 1.0f;
     float time = 0f;
+    
     // Use this for initialization
     void Start()
     {
