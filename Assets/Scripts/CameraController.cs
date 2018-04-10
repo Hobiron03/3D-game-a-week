@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour {
         diff = player.transform.position - transform.position;	
 	}
 
-    private void LateUpdate()
+    private void Update()
     {
         transform.position = Vector3.Lerp(transform.position, player.transform.position - diff, Time.deltaTime * speed);
     }
