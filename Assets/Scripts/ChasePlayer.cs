@@ -5,17 +5,20 @@ using UnityEngine;
 public class ChasePlayer : MonoBehaviour {
 
     public GameObject player;
+    public float speed = 3.0f;
     public float lookPlayerSpeed = 3.0f;
+
+    Rigidbody rigidbody;
 	// Use this for initialization
 	void Start () {
-		
+        rigidbody = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        
-	}
+        transform.Translate(Vector3.forward * speed);
+    }
 
     private void LateUpdate()
     {
