@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FadeController : MonoBehaviour {
 
-    float fadeSpeed = 0.1f;
+    float fadeSpeed = 0.07f;
     float red, green, blue, alpha;
 
     public bool isFadeOut = false;

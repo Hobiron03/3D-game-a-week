@@ -38,7 +38,7 @@ public class GameDirector : MonoBehaviour {
     public void AddDestroyEnemyNum()
     {
         destroyedEnemyNum += 1;
-
+        Debug.Log(destroyedEnemyNum);
         if(destroyedEnemyNum == enemyCount)
         {
             isGameClear = true;
@@ -55,11 +55,31 @@ public class GameDirector : MonoBehaviour {
     {
         FadeUI.GetComponent<FadeController>().isFadeOut = true;
         isGameClear = false;
-        Invoke("LoadStage2", 1.0f);
+
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Stage1":
+                Invoke("LoadStage2", 1.0f);
+                break;
+
+            case "Stage2":
+                Invoke("LoadStage3", 1.0f);
+                break;
+
+            default:
+                break;
+
+        }
+        
     }
 
     void LoadStage2()
     {
         SceneManager.LoadScene("Stage2");
+    }
+
+    void LoadStage3()
+    {
+        SceneManager.LoadScene("Stage3");
     }
 }

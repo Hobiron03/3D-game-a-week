@@ -213,7 +213,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1403056273414202, guid: 1ff3a8ff2156d45498137476f39f2788, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ff3a8ff2156d45498137476f39f2788, type: 2}
@@ -1195,6 +1195,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &1239784272 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1990471783761206, guid: 1ff3a8ff2156d45498137476f39f2788,
+    type: 2}
+  m_PrefabInternal: {fileID: 134255396}
 --- !u!1001 &1274365365
 Prefab:
   m_ObjectHideFlags: 0
@@ -1405,7 +1410,7 @@ Prefab:
         type: 2}
       propertyPath: FadeUI
       value: 
-      objectReference: {fileID: 2033525907}
+      objectReference: {fileID: 1239784272}
     - target: {fileID: 114267064061098092, guid: 60d6462c9fd749844b7813d54b0f9182,
         type: 2}
       propertyPath: hpBar
@@ -2223,11 +2228,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2031510765}
---- !u!1 &2033525907 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1403056273414202, guid: 1ff3a8ff2156d45498137476f39f2788,
-    type: 2}
-  m_PrefabInternal: {fileID: 134255396}
 --- !u!1 &2092624862 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1015700665513302, guid: c0803fa5abcfda947be134ffac4eaf58,
