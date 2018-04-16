@@ -16,10 +16,11 @@ public class GameDirector : MonoBehaviour {
     public GameObject gameClearUI;
     public GameObject gameOverUI;
     public GameObject FadeUI;
+    public GameObject Barrier;
+
+    public GameObject sound;
+    public Button button;
 	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update ()
@@ -39,6 +40,12 @@ public class GameDirector : MonoBehaviour {
     {
         destroyedEnemyNum += 1;
         Debug.Log(destroyedEnemyNum);
+
+        if(destroyedEnemyNum == enemyCount -1 && SceneManager.GetActiveScene().name == "Stage3")
+        {
+            Barrier.GetComponent<Barrier>().DestroyBarrier();
+        }
+
         if(destroyedEnemyNum == enemyCount)
         {
             isGameClear = true;
@@ -49,6 +56,7 @@ public class GameDirector : MonoBehaviour {
     public void GameOver()
     {
         gameOverUI.GetComponent<TextFadeGameOver>().isGameOver = true;
+
     }
 
     void FadeOut()
@@ -66,6 +74,10 @@ public class GameDirector : MonoBehaviour {
                 Invoke("LoadStage3", 1.0f);
                 break;
 
+            case "Stage3":
+                Invoke("LoadClear", 1.0f);
+                break;
+
             default:
                 break;
 
@@ -81,5 +93,16 @@ public class GameDirector : MonoBehaviour {
     void LoadStage3()
     {
         SceneManager.LoadScene("Stage3");
+    }
+
+    void LoadClear()
+    {
+        SceneManager.LoadScene("Clear");
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("Stage1");
+    
     }
 }

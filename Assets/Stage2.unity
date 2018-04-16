@@ -1249,6 +1249,15 @@ Prefab:
       propertyPath: gameDirector
       value: 
       objectReference: {fileID: 1145498289}
+    - target: {fileID: 4617497376888318, guid: b5a5d7ce7da73df459d7ce2778d6f6db, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114516830502283368, guid: b5a5d7ce7da73df459d7ce2778d6f6db,
+        type: 2}
+      propertyPath: isRotate
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5a5d7ce7da73df459d7ce2778d6f6db, type: 2}
   m_IsPrefabParent: 0

@@ -6,6 +6,8 @@ public class CylinderEnemyShot : MonoBehaviour {
 
     public GameObject enemyBullet;
 
+   
+
     float timeInterval = 0.6f;
     float time = 0f;
 
@@ -27,6 +29,7 @@ public class CylinderEnemyShot : MonoBehaviour {
             bullet.transform.rotation = transform.rotation;
             time = 0f;
         }
+
 
     }
 }

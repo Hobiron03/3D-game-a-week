@@ -13,7 +13,7 @@ public class TextFade : MonoBehaviour {
     float red, green, blue, alpha;
     TextMeshProUGUI fadeImage;
 
-    AudioSource audio;
+    
     // Use this for initialization
     void Start ()
     {
@@ -44,7 +44,7 @@ public class TextFade : MonoBehaviour {
         if (alpha >= 255)
         {
             gameClear = false;
-            audio.Play();
+            
         }
     }
 

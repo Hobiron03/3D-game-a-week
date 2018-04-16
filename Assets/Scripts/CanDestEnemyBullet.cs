@@ -10,7 +10,7 @@ public class CanDestEnemyBullet : MonoBehaviour {
     void Start()
     {
         GetComponent<Rigidbody>().velocity = transform.forward.normalized * speed;
-        //Invoke("Destroy", 2.0f);
+        Invoke("Destroy", 2.0f);
     }
 
     // Update is called once per frame
@@ -27,5 +27,10 @@ public class CanDestEnemyBullet : MonoBehaviour {
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+    }
+
+    void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour {
 	void Start ()
     {
         GetComponent<Rigidbody>().velocity = transform.forward.normalized * speed;
-        //Invoke("Destroy", 2.0f);
+        Invoke("Destroy", 2.0f);
 	}
 	
 	// Update is called once per frame

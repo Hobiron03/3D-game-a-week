@@ -40,7 +40,7 @@ public class EnemyController : MonoBehaviour {
     void GotShot()
     {
         life -= 1;
-        if(life <= 0)
+        if(life == 0)
         {
             AudioSource.PlayClipAtPoint(destroySE, mainCamera.transform.position, 0.4f);
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
